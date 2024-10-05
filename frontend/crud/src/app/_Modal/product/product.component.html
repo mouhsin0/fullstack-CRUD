@@ -1,0 +1,44 @@
+<main class="" [ngClass]="{'bg-gray-800': checked()}">
+
+    <form [formGroup]="CRUD" (ngSubmit)="Submit()">
+
+        <mat-dialog-content>
+    
+            <div class="flex justify-between gap-x-[20px]">
+                <mat-form-field>
+                    <mat-label>Product Name</mat-label>
+                    <input matInput formControlName="name">
+                </mat-form-field>
+
+                <mat-form-field >
+                    <mat-label> Image of Product </mat-label>
+                    <input matInput formControlName="image">
+                </mat-form-field>
+            </div>
+
+
+            <div class="flex justify-between gap-x-[20px]">
+
+                <mat-form-field >
+                    <mat-label>Price</mat-label>
+                    <input matInput formControlName="price">
+                </mat-form-field>
+
+
+                <mat-form-field >
+                    <mat-label>Quantity</mat-label>
+                    <input matInput formControlName="quantity">
+                </mat-form-field>
+
+            </div>
+
+        </mat-dialog-content>
+    
+        <mat-dialog-actions>
+            <button mat-raised-button mat-dialog-close="true" class="!flex-1 !bg-red-600 !text-white !rounded-[5px]">close</button>
+            <button mat-raised-button type="submit" class="!flex-1 !bg-blue-950 !text-white !rounded-[5px]"> {{data ? 'Update' : 'Add'}} </button>
+        </mat-dialog-actions>
+
+    </form>
+
+</main>
