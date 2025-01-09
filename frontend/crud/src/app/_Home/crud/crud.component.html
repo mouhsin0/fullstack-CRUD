@@ -1,10 +1,16 @@
-<mat-toolbar class="flex justify-between items-center fixed z-10  mat-elevation-z2" [ngClass]="{'!bg-gray-800 !text-white': checked(), '!bg-gray-200': !checked()}">
+<mat-toolbar class="flex justify-between items-center !px-10 fixed z-10 mat-elevation-z2" [ngClass]="{'!bg-gray-800 !text-white': checked(), '!bg-gray-200': !checked()}">
 
     <span> <strong>CRUD</strong> </span>
 
     <span class="flex justify-between items-center gap-x-[20px]">
+        <button mat-icon-button (click)="slide()">
+
+             <mat-icon [class]="checked() ? 'text-white' : 'text-black' " > {{checked() ? 'light_mode' : 'dark_mode'}} </mat-icon>
+            
+        </button>
+
         <button mat-icon-button (click)="addProduct()"> <mat-icon [ngClass]="{'!text-white': checked()}"> add_shopping_cart </mat-icon> </button>
-        <mat-slide-toggle [checked]="checked()" (change)="slide()"></mat-slide-toggle>
+        <!-- <mat-slide-toggle [checked]="checked()" (change)="slide()"></mat-slide-toggle> -->
     </span>
 
 </mat-toolbar>
