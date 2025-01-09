@@ -6,20 +6,15 @@ const dotenv = require('dotenv')
 
 const productRoutes = require('./routes/product.route')
 
+const cors =  require('cors')
+
 const app = express()
 
 dotenv.config()
 
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
-
-app.use((req, res, next) => {
-
-    res.setHeader('Access-Control-Allow-Origin', '*'),
-    res.setHeader('Access-Control-Allow-Methods', '*'),
-    res.setHeader('Access-Control-Allow-Headers', '*')
-    next()
-})
+app.use(cors({credentials: true, origin: '*'}))
 
 app.use('/crud', productRoutes)
 
