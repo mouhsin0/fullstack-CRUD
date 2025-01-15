@@ -1,1 +1,1 @@
-preview: https://crud-app-mi.netlify.app/
+Link: https://crud-app-mi.netlify.app/
