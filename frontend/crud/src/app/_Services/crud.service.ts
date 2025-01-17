@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 
-const URL = 'http://localhost:3000/crud'
+const URL = 'https://fullstack-crud-backend.onrender.com/crud'
 
 @Injectable({
   providedIn: 'root'
